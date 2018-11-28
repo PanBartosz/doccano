@@ -26,6 +26,10 @@ class ProjectView(LoginRequiredMixin, TemplateView):
         return [project.get_template_name()]
 
 
+class ProjectOverView(LoginRequiredMixin, TemplateView):
+    template_name = 'admin/project.html'
+
+
 class ProjectsView(LoginRequiredMixin, CreateView):
     form_class = ProjectForm
     template_name = 'projects.html'
